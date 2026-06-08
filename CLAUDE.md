@@ -8,38 +8,39 @@
 ## Стек
 
 - **HTML** — семантическая разметка по БЭМ
-- **SCSS** — стили по БЭМ, компилируется в CSS
-- **JavaScript (vanilla)** — без фреймворков и библиотек
+- **SCSS** — стили по БЭМ, компилируется через Vite + sass
+- **JavaScript (vanilla)** — ES-модули, без фреймворков и библиотек
+- **Vite** — сборщик, dev-сервер с HMR
+- **pnpm** — пакетный менеджер
 
 ## Структура проекта
 
 ```
 project/
 ├── index.html
+├── vite.config.js
+├── package.json
 ├── src/
 │   ├── scss/
-│   │   ├── main.scss          # точка входа, импортирует всё
+│   │   ├── main.scss          # точка входа, импортируется в main.js
 │   │   ├── _variables.scss    # цвета, отступы, типографика
 │   │   ├── _reset.scss        # сброс стилей
 │   │   ├── _typography.scss   # шрифты и текстовые стили
-│   │   ├── blocks/
-│   │   │   ├── _header.scss
-│   │   │   ├── _filters.scss
-│   │   │   ├── _search.scss
-│   │   │   ├── _catalog.scss
-│   │   │   └── _card.scss
+│   │   └── blocks/
+│   │       ├── _header.scss
+│   │       ├── _filters.scss
+│   │       ├── _search.scss
+│   │       ├── _catalog.scss
+│   │       └── _card.scss
 │   └── js/
-│       ├── main.js            # точка входа
+│       ├── main.js            # точка входа, импортирует SCSS и модули
 │       ├── data.js            # данные карточек
 │       ├── filter.js          # логика фильтрации по категориям
 │       ├── search.js          # логика живого поиска
 │       └── render.js          # рендер карточек в DOM
 ├── assets/
 │   └── images/                # изображения карточек
-├── dist/
-│   └── main.css               # скомпилированный CSS (git-ignore или генерируется)
-├── package.json
-└── README.md
+└── dist/                      # продакшн-сборка Vite (git-ignore)
 ```
 
 ## Соглашения по коду
@@ -118,12 +119,11 @@ project/
 ## Запуск
 
 ```bash
-npm install       # установить зависимости (sass)
-npm run build     # скомпилировать SCSS → CSS
-npm run watch     # следить за изменениями
+pnpm install      # установить зависимости
+pnpm dev          # dev-сервер с hot-reload → localhost:5173
+pnpm build        # продакшн-сборка → dist/
+pnpm preview      # превью продакшн-сборки
 ```
-
-Или через Live Server + prepros/vite для SCSS.
 
 ## Деплой
 
