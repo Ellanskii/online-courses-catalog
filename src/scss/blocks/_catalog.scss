@@ -1,11 +1,9 @@
 @use '../variables' as *;
 
 .catalog {
-  position: relative;
   max-width: $max-width;
   margin: 0 auto;
   padding: $gap-xxl $gap-md $gap-xl;
-  overflow: hidden; // clip decorative images that overflow on narrow screens
 
   // ── Heading ──────────────────────────────────────────
   &__header {
@@ -53,31 +51,6 @@
     margin-top: $gap-xl;
   }
 
-  // ── Decorative elements (absolute) ───────────────────
-  &__deco {
-    position: absolute;
-    pointer-events: none;
-    user-select: none;
-
-    &--dots {
-      top: 0;
-      right: 0;
-      width: clamp(90px, 11vw, 140px);
-    }
-
-    &--arrows-left {
-      left: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: clamp(36px, 4vw, 54px);
-    }
-
-    &--arrows-right {
-      right: -8px;
-      bottom: 14%;
-      width: clamp(36px, 4vw, 54px);
-    }
-  }
 }
 
 // ── Load more button ─────────────────────────────────

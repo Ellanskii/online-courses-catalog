@@ -19,6 +19,15 @@ body {
   color: $color-text;
   background-color: $color-bg;
   -webkit-font-smoothing: antialiased;
+  background-image:
+    url('/assets/decorative/dots.svg'),
+    url('/assets/decorative/rings.svg'),
+    url('/assets/decorative/arrows.svg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    right 0 top 50px,
+    left 56px top 687px,
+    right 72px top 1104px;
 }
 
 button {
