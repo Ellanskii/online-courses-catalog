@@ -2,28 +2,36 @@
 
 .search {
   position: relative;
-  width: clamp(200px, 30%, 400px);
+  flex-shrink: 0;
 
   &__input {
-    width: 100%;
-    padding: $gap-xs $gap-md $gap-xs $gap-sm;
-    border: 1px solid #E0E0E0;
+    width: clamp(180px, 22vw, 260px);
+    padding: 8px 36px 8px 14px;
+    border: 1.5px solid $color-border;
     border-radius: $radius-sm;
-    font-size: $font-size-base;
+    font-size: $fs-sm;
+    font-family: $font;
+    color: $color-text;
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.18s;
+
+    &::placeholder {
+      color: $color-muted;
+    }
 
     &:focus {
-      border-color: $color-text;
+      border-color: $color-muted;
     }
   }
 
   &__icon {
     position: absolute;
-    right: $gap-sm;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
+    color: $color-muted;
+    display: flex;
+    align-items: center;
     pointer-events: none;
-    color: $color-text-muted;
   }
 }

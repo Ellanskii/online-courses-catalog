@@ -1,8 +1,8 @@
 const BADGE_LABELS = {
-  marketing: 'Marketing',
-  management: 'Management',
-  hr: 'HR & Recruiting',
-  design: 'Design',
+  marketing:   'Marketing',
+  management:  'Management',
+  hr:          'HR & Recruiting',
+  design:      'Design',
   development: 'Development',
 };
 
@@ -10,20 +10,24 @@ function createCard(course) {
   const card = document.createElement('article');
   card.className = 'card';
 
-  const imageContent = course.image
-    ? `<img class="card__image" src="${course.image}" alt="${course.title}" />`
-    : '';
-
   card.innerHTML = `
-    <div class="card__image-wrap">
-      ${imageContent}
-      <span class="card__badge card__badge--${course.category}">${BADGE_LABELS[course.category]}</span>
+    <div class="card__preview">
+      <img
+        class="card__photo"
+        src="${course.image}"
+        alt="${course.title}"
+        loading="lazy"
+      />
     </div>
     <div class="card__body">
+      <span class="card__badge card__badge--${course.category}">
+        ${BADGE_LABELS[course.category]}
+      </span>
       <h2 class="card__title">${course.title}</h2>
-      <p class="card__author">${course.author}</p>
-      <div class="card__footer">
+      <div class="card__meta">
         <span class="card__price">$${course.price}</span>
+        <span class="card__divider">|</span>
+        <span class="card__author">by ${course.author}</span>
       </div>
     </div>
   `;

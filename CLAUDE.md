@@ -27,7 +27,6 @@ project/
 │   │   ├── _reset.scss        # сброс стилей
 │   │   ├── _typography.scss   # шрифты и текстовые стили
 │   │   └── blocks/
-│   │       ├── _header.scss
 │   │       ├── _filters.scss
 │   │       ├── _search.scss
 │   │       ├── _catalog.scss
@@ -38,8 +37,11 @@ project/
 │       ├── filter.js          # логика фильтрации по категориям
 │       ├── search.js          # логика живого поиска
 │       └── render.js          # рендер карточек в DOM
-├── assets/
-│   └── images/                # изображения карточек
+├── public/                    # статика — Vite копирует в dist/ as-is
+│   └── assets/
+│       ├── decorative/        # SVG-паттерны (кольца, точки, шевроны)
+│       └── images/
+│           └── courses/       # фото карточек (git-ignore)
 └── dist/                      # продакшн-сборка Vite (git-ignore)
 ```
 

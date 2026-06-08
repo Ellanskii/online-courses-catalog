@@ -4,34 +4,47 @@ import { renderCatalog } from './render.js';
 import { filterByCategory, updateFilterCounts } from './filter.js';
 import { filterBySearch } from './search.js';
 
-const grid = document.getElementById('catalog-grid');
+const PAGE_SIZE = 9;
+
+const grid        = document.getElementById('catalog-grid');
+const loadMoreBtn = document.getElementById('load-more');
 const searchInput = document.querySelector('.search__input');
-const filterButtons = document.querySelectorAll('.filters__item');
+const filterBtns  = document.querySelectorAll('.filters__item');
 
 let activeCategory = 'all';
-let searchQuery = '';
+let searchQuery    = '';
+let visibleCount   = PAGE_SIZE;
 
 function getFiltered() {
   return filterBySearch(filterByCategory(courses, activeCategory), searchQuery);
 }
 
 function update() {
-  renderCatalog(getFiltered(), grid);
+  const filtered = getFiltered();
+  renderCatalog(filtered.slice(0, visibleCount), grid);
+  loadMoreBtn.style.display = filtered.length > visibleCount ? 'flex' : 'none';
 }
 
-updateFilterCounts(courses, filterButtons);
+updateFilterCounts(courses, filterBtns);
 
-filterButtons.forEach(btn => {
+filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterButtons.forEach(b => b.classList.remove('filters__item--active'));
+    filterBtns.forEach(b => b.classList.remove('filters__item--active'));
     btn.classList.add('filters__item--active');
     activeCategory = btn.dataset.category;
+    visibleCount = PAGE_SIZE;
     update();
   });
 });
 
 searchInput.addEventListener('input', e => {
-  searchQuery = e.target.value;
+  searchQuery  = e.target.value;
+  visibleCount = PAGE_SIZE;
+  update();
+});
+
+loadMoreBtn.addEventListener('click', () => {
+  visibleCount += PAGE_SIZE;
   update();
 });
 

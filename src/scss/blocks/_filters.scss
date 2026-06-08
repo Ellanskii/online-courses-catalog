@@ -1,28 +1,37 @@
 @use '../variables' as *;
-@use 'sass:color';
 
 .filters {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: $gap-xs;
+  gap: 4px;
 
   &__item {
-    padding: $gap-xs $gap-sm;
-    border-radius: $radius-sm;
-    background-color: $color-white;
-    color: $color-text-muted;
-    font-size: $font-size-sm;
+    position: relative;
+    padding: 6px 14px;
+    border-radius: $radius-xs;
+    border: 1.5px solid transparent;
+    font-size: $fs-sm;
     font-weight: 500;
-    transition: background-color 0.2s, color 0.2s;
+    color: $color-muted;
+    line-height: 1.5;
+    transition: color 0.18s, border-color 0.18s;
+    white-space: nowrap;
 
     &:hover {
-      background-color: color.adjust($color-white, $lightness: -5%);
       color: $color-text;
     }
 
     &--active {
-      background-color: $color-text;
-      color: $color-white;
+      border-color: $color-active;
+      color: $color-text;
     }
+  }
+
+  &__count {
+    font-size: 0.72em;
+    font-weight: 400;
+    vertical-align: super;
+    margin-left: 1px;
   }
 }

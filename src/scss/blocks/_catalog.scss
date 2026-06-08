@@ -1,44 +1,100 @@
 @use '../variables' as *;
 
 .catalog {
-  max-width: 1280px;
+  position: relative;
+  max-width: $max-width;
   margin: 0 auto;
-  padding: $gap-lg $gap-md;
+  padding: $gap-xxl $gap-md $gap-xl;
+  overflow: hidden; // clip decorative images that overflow on narrow screens
 
-  &__top {
+  // ── Heading ──────────────────────────────────────────
+  &__header {
+    text-align: center;
+    margin-bottom: $gap-xl;
+  }
+
+  &__subtitle {
+    font-size: $fs-subtitle;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $color-muted;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: $fs-title;
+    font-weight: 800;
+    line-height: 1.15;
+    color: $color-text;
+  }
+
+  // ── Controls row ─────────────────────────────────────
+  &__controls {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: $gap-sm;
     margin-bottom: $gap-lg;
   }
 
+  // ── Card grid ─────────────────────────────────────────
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax($card-min-width, 1fr));
     gap: $gap-md;
   }
 
+  // ── Footer / Load more ───────────────────────────────
   &__footer {
     display: flex;
     justify-content: center;
     margin-top: $gap-xl;
   }
+
+  // ── Decorative elements (absolute) ───────────────────
+  &__deco {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+
+    &--dots {
+      top: 0;
+      right: 0;
+      width: clamp(90px, 11vw, 140px);
+    }
+
+    &--arrows-left {
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: clamp(36px, 4vw, 54px);
+    }
+
+    &--arrows-right {
+      right: -8px;
+      bottom: 14%;
+      width: clamp(36px, 4vw, 54px);
+    }
+  }
 }
 
+// ── Load more button ─────────────────────────────────
 .load-more {
   display: inline-flex;
   align-items: center;
-  gap: $gap-xs;
-  padding: $gap-sm $gap-lg;
-  border: 2px solid $color-text;
-  border-radius: $radius-sm;
-  font-weight: 600;
-  transition: background-color 0.2s, color 0.2s;
+  gap: 8px;
+  font-size: $fs-base;
+  font-weight: 500;
+  color: $color-text;
+  transition: opacity 0.2s;
 
   &:hover {
-    background-color: $color-text;
-    color: $color-white;
+    opacity: 0.6;
+  }
+
+  &__icon {
+    flex-shrink: 0;
   }
 }

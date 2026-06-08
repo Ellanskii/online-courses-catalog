@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+  <circle cx="200" cy="215" r="55"  fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <circle cx="200" cy="215" r="95"  fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+  <circle cx="200" cy="215" r="135" fill="none" stroke="rgba(255,255,255,0.17)" stroke-width="1.5"/>
+  <circle cx="200" cy="215" r="175" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+  <circle cx="200" cy="215" r="215" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="1.5"/>
+  <circle cx="200" cy="215" r="255" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+</svg>

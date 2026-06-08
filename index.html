@@ -6,38 +6,63 @@
   <title>Online Courses Catalog</title>
 </head>
 <body>
-  <header class="header">
-    <div class="header__inner">
-      <div class="header__logo">Courses</div>
-      <nav class="header__nav"></nav>
-    </div>
-  </header>
+  <main class="catalog">
 
-  <main class="main">
-    <section class="catalog">
-      <div class="catalog__top">
-        <div class="search">
-          <input class="search__input" type="text" placeholder="Search courses..." />
-          <span class="search__icon"></span>
-        </div>
-        <div class="filters">
-          <button class="filters__item filters__item--active" data-category="all">All</button>
-          <button class="filters__item" data-category="marketing">Marketing</button>
-          <button class="filters__item" data-category="management">Management</button>
-          <button class="filters__item" data-category="hr">HR &amp; Recruiting</button>
-          <button class="filters__item" data-category="design">Design</button>
-          <button class="filters__item" data-category="development">Development</button>
-        </div>
-      </div>
+    <img class="catalog__deco catalog__deco--dots"        src="/assets/decorative/dots.svg"   alt="" aria-hidden="true">
+    <img class="catalog__deco catalog__deco--arrows-left"  src="/assets/decorative/arrows.svg" alt="" aria-hidden="true">
+    <img class="catalog__deco catalog__deco--arrows-right" src="/assets/decorative/arrows.svg" alt="" aria-hidden="true">
 
-      <div class="catalog__grid" id="catalog-grid"></div>
+    <header class="catalog__header">
+      <p class="catalog__subtitle">Enjoy your studying!</p>
+      <h1 class="catalog__title">Our online courses</h1>
+    </header>
 
-      <div class="catalog__footer">
-        <button class="load-more" id="load-more">
-          <span>Load more</span>
+    <div class="catalog__controls">
+      <nav class="filters" aria-label="Course categories">
+        <button class="filters__item filters__item--active" data-category="all">
+          All<sup class="filters__count"></sup>
         </button>
+        <button class="filters__item" data-category="marketing">
+          Marketing<sup class="filters__count"></sup>
+        </button>
+        <button class="filters__item" data-category="management">
+          Management<sup class="filters__count"></sup>
+        </button>
+        <button class="filters__item" data-category="hr">
+          HR &amp; Recruiting<sup class="filters__count"></sup>
+        </button>
+        <button class="filters__item" data-category="design">
+          Design<sup class="filters__count"></sup>
+        </button>
+        <button class="filters__item" data-category="development">
+          Development<sup class="filters__count"></sup>
+        </button>
+      </nav>
+
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Search course..." aria-label="Search courses" />
+        <span class="search__icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
       </div>
-    </section>
+    </div>
+
+    <div class="catalog__grid" id="catalog-grid"></div>
+
+    <div class="catalog__footer">
+      <button class="load-more" id="load-more">
+        <svg class="load-more__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"/>
+          <polyline points="1 20 1 14 7 14"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+        <span>Load more</span>
+      </button>
+    </div>
+
   </main>
 
   <script type="module" src="src/js/main.js"></script>
