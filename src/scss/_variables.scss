@@ -1,0 +1,35 @@
+// Colors
+$color-primary: #FFD700;
+$color-accent: #FF4D00;
+$color-text: #1A1A1A;
+$color-text-muted: #888888;
+$color-bg: #F5F5F5;
+$color-white: #FFFFFF;
+
+$badge-marketing: #FF6B6B;
+$badge-management: #4ECDC4;
+$badge-hr: #A78BFA;
+$badge-design: #F59E0B;
+$badge-development: #34D399;
+
+// Spacing
+$gap-xs: 0.5rem;
+$gap-sm: 1rem;
+$gap-md: 1.5rem;
+$gap-lg: 2rem;
+$gap-xl: 3rem;
+
+// Typography
+$font-family: 'Inter', sans-serif;
+$font-size-base: clamp(14px, 1.5vw, 16px);
+$font-size-sm: clamp(12px, 1.2vw, 14px);
+$font-size-lg: clamp(18px, 2vw, 24px);
+$font-size-xl: clamp(24px, 3vw, 36px);
+
+// Border radius
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+
+// Card
+$card-min-width: 280px;

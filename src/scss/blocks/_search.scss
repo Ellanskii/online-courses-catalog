@@ -1,0 +1,29 @@
+@use '../variables' as *;
+
+.search {
+  position: relative;
+  width: clamp(200px, 30%, 400px);
+
+  &__input {
+    width: 100%;
+    padding: $gap-xs $gap-md $gap-xs $gap-sm;
+    border: 1px solid #E0E0E0;
+    border-radius: $radius-sm;
+    font-size: $font-size-base;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: $color-text;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: $gap-sm;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: $color-text-muted;
+  }
+}
