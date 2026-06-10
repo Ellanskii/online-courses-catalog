@@ -9,7 +9,7 @@ export const courses = [
   },
   {
     id: 2,
-    title: 'Prduct Management Fundamentals',
+    title: 'Product Management Fundamentals',
     author: 'Marvin McKinney',
     category: 'management',
     price: 480,

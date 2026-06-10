@@ -43,7 +43,7 @@
 
   // ── Card body ─────────────────────────────────────
   &__body {
-    padding: 1.5rem;
+    padding: $gap-md;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;

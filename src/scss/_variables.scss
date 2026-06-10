@@ -37,12 +37,9 @@ $badge-design:      $danger;
 $badge-development: #9C5CBF;
 
 // ── Spacing ───────────────────────────────────────────
-$gap-xs:  0.5rem;    //  8px
 $gap-sm:  1rem;      // 16px
 $gap-md:  1.5rem;    // 24px
-$gap-lg:  2rem;      // 32px
 $gap-xl:  3rem;      // 48px
-$gap-xxl: 4rem;      // 64px
 
 // ── Typography ────────────────────────────────────────
 $font:           'Lato', sans-serif;
@@ -56,8 +53,6 @@ $card-min-width: 390px;
 
 // ── Borders / shadows ────────────────────────────────
 $radius-xs: 4px;
-$radius-sm: 8px;
-$radius-md: 16px;
 $shadow-card:
   0px 4px 4px -4px rgba(30, 33, 44, 0.03),
   0px 12px 10px -6px rgba(154, 156, 165, 0.04),
