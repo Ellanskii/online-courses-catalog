@@ -4,6 +4,8 @@
 
 Макет: [Figma](https://www.figma.com/design/iuXLXifXgv4ZCzad0KeYKr/Test-Task?node-id=0-1)
 
+Демо: [GitHub Pages](https://ellanskii.github.io/online-courses-catalog/)
+
 ## Стек
 
 - HTML — семантическая разметка по БЭМ
