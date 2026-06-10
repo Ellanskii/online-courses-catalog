@@ -5,10 +5,11 @@
   flex-shrink: 0;
 
   &__input {
-    width: clamp(180px, 22vw, 260px);
+    width: clamp(180px, 22vw, 315px);
+    height: 44px;
     padding: 8px 36px 8px 14px;
-    border: 1.5px solid $color-border;
-    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+    border-radius: $radius-xs;
     font-size: $fs-sm;
     font-family: $font;
     color: $color-text;

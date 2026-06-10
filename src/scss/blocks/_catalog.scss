@@ -3,12 +3,12 @@
 .catalog {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 2.75rem $gap-md $gap-xl;
+  padding: 2.75rem clamp(0px, (#{$max-width} + #{$gap-md} * 2 - 100vw) / 2, #{$gap-md}) $gap-xl;
 
   // ── Heading ──────────────────────────────────────────
   &__header {
     text-align: center;
-    margin-bottom: $gap-xl;
+    margin-bottom: 5.3125rem;
   }
 
   &__subtitle {
@@ -40,7 +40,7 @@
   // ── Card grid ─────────────────────────────────────────
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax($card-min-width, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min($card-min-width, 100%), 1fr));
     gap: $gap-md;
   }
 
