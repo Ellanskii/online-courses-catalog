@@ -14,7 +14,7 @@ function createCard(course) {
     <div class="card__preview">
       <img
         class="card__photo"
-        src="${course.image}"
+        src="${import.meta.env.BASE_URL}${course.image.replace(/^\//, '')}"
         alt="${course.title}"
         loading="lazy"
       />
