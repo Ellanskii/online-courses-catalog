@@ -45,7 +45,7 @@ $gap-xl:  3rem;      // 48px
 $gap-xxl: 4rem;      // 64px
 
 // ── Typography ────────────────────────────────────────
-$font:           'Inter', sans-serif;
+$font:           'Lato', sans-serif;
 $fs-xs:          clamp(11px, 1vw,   12px);
 $fs-sm:          clamp(12px, 1.2vw, 13px);
 $fs-base:        clamp(13px, 1.4vw, 15px);
@@ -61,5 +61,9 @@ $card-min-width: 288px;
 $radius-xs: 4px;
 $radius-sm: 8px;
 $radius-md: 16px;
-$shadow-card: 0 4px 24px rgba(0, 0, 0, 0.07);
+$shadow-card:
+  0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+  0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+  0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+  0px 80px 80px -20px rgba(154, 156, 165, 0.08);
 $shadow-card-hover: 0 10px 36px rgba(0, 0, 0, 0.13);

@@ -3,7 +3,7 @@
 .catalog {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $gap-xxl $gap-md $gap-xl;
+  padding: 2.75rem $gap-md $gap-xl;
 
   // ── Heading ──────────────────────────────────────────
   &__header {
@@ -16,7 +16,7 @@
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: $color-muted;
+    color: $gray-900;
     margin-bottom: 10px;
   }
 
@@ -60,7 +60,7 @@
   gap: 8px;
   font-size: $fs-base;
   font-weight: 500;
-  color: $color-text;
+  color: $gray-800;
   transition: opacity 0.2s;
 
   &:hover {
