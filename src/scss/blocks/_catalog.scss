@@ -39,6 +39,17 @@
     flex-wrap: wrap;
     gap: $gap-sm;
     margin-bottom: 3.75rem;
+
+    @media (max-width: 768px) {
+      .search {
+        order: -1;
+        width: 100%;
+      }
+
+      .search__input {
+        width: 100%;
+      }
+    }
   }
 
   // ── Card grid ─────────────────────────────────────────
