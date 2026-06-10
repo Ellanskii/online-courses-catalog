@@ -1,18 +1,39 @@
 // ── Palette ──────────────────────────────────────────
-$color-yellow:   #FFB81C;
-$color-white:    #FFFFFF;
-$color-bg:       #FFFFFF;
-$color-text:     #1C1C1C;
-$color-muted:    #9B9B9B;
-$color-border:   #EBEBEB;
-$color-price:    #E8413F;
-$color-active:   #E8413F;   // filter border / active state
+$white:        #FFFFFF;
+$primary:      #FF3F3A;
+$btn-gradient: linear-gradient(135deg, #FF3F3A, #F75E05);
+$secondary:    #FFCF2D;
+$success:      #03CEA4;
+$danger:       #FF4242;
+$warning:      #F89828;
+$info:         #5A87FC;
+
+// Greyscale
+$gray-900: #1E212C;
+$gray-800: #424551;
+$gray-700: #787A80;
+$gray-600: #9A9CA5;
+$gray-500: #B3B7BC;
+$gray-400: #D7DADD;
+$gray-300: #E5E8ED;
+$gray-200: #F4F5F6;
+$gray-100: #F9F9F9;
+
+// Semantic aliases
+$color-white:    $white;
+$color-bg:       $white;
+$color-text:     $gray-900;
+$color-muted:    $gray-600;
+$color-border:   $gray-300;
+$color-price:    $primary;
+$color-active:   $primary;   // filter border / active state
+$color-yellow:   $secondary;
 
 // Category badge backgrounds
-$badge-marketing:   #26C4A0;
-$badge-management:  #5B8DDE;
-$badge-hr:          #FF9500;
-$badge-design:      #FF4D67;
+$badge-marketing:   $success;
+$badge-management:  $info;
+$badge-hr:          $warning;
+$badge-design:      $danger;
 $badge-development: #9C5CBF;
 
 // ── Spacing ───────────────────────────────────────────
