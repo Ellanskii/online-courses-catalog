@@ -22,7 +22,9 @@
     background-image: url('/assets/decorative/rings.svg'); // served from public/
     background-size: cover;
     background-position: center;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 390 / 240;
+    border-top-left-radius: $radius-xs;
+    border-top-right-radius: $radius-xs;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -50,14 +52,18 @@
 
   // ── Category badge ────────────────────────────────
   &__badge {
-    display: inline-block;
-    padding: 3px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1px 8px;
     border-radius: $radius-xs;
-    font-size: $fs-xs;
-    font-weight: 600;
+    font-family: $font;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0;
     color: $color-white;
     align-self: flex-start;
-    line-height: 1.6;
+    line-height: 1.5;
 
     &--marketing   { background-color: $badge-marketing; }
     &--management  { background-color: $badge-management; }
@@ -68,9 +74,11 @@
 
   // ── Title ─────────────────────────────────────────
   &__title {
-    font-size: $fs-md;
+    font-family: $font;
+    font-size: 1.25rem;
     font-weight: 700;
-    line-height: 1.35;
+    line-height: 1.5;
+    letter-spacing: 0;
     color: $color-text;
     flex: 1;
   }

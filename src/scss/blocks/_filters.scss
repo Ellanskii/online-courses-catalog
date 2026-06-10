@@ -8,7 +8,7 @@
 
   &__item {
     position: relative;
-    padding: 6px 14px;
+    padding: 10px 20px;
     border-radius: $radius-xs;
     border: 1.5px solid transparent;
     font-family: $font;
@@ -16,6 +16,8 @@
     font-weight: 700;
     color: $color-muted;
     line-height: 1.6;
+    letter-spacing: 0;
+    text-align: center;
     transition: color 0.18s, border-color 0.18s;
     white-space: nowrap;
 

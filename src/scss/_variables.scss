@@ -46,12 +46,9 @@ $gap-xxl: 4rem;      // 64px
 
 // ── Typography ────────────────────────────────────────
 $font:           'Lato', sans-serif;
-$fs-xs:          clamp(11px, 1vw,   12px);
 $fs-sm:          clamp(12px, 1.2vw, 13px);
 $fs-base:        clamp(13px, 1.4vw, 15px);
 $fs-md:          clamp(15px, 1.6vw, 17px);
-$fs-title:       clamp(32px, 5vw,   52px);
-$fs-subtitle:    clamp(11px, 1.1vw, 12px);
 
 // ── Layout ────────────────────────────────────────────
 $max-width:      1230px;
