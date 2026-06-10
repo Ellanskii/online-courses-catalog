@@ -45,14 +45,14 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min($card-min-width, 100%), 1fr));
-    gap: $gap-md;
+    gap: 1.875rem;
   }
 
   // ── Footer / Load more ───────────────────────────────
   &__footer {
     display: flex;
     justify-content: center;
-    margin-top: $gap-xl;
+    margin-top: 5rem;
   }
 
 }
@@ -61,9 +61,13 @@
 .load-more {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: $fs-base;
-  font-weight: 500;
+  gap: 16px;
+  font-family: $font;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0;
+  vertical-align: middle;
   color: $gray-800;
   transition: opacity 0.2s;
 
@@ -73,5 +77,8 @@
 
   &__icon {
     flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    transform: scaleX(-1);
   }
 }

@@ -80,7 +80,6 @@
     line-height: 1.5;
     letter-spacing: 0;
     color: $color-text;
-    flex: 1;
   }
 
   // ── Meta row ──────────────────────────────────────
@@ -98,13 +97,17 @@
   }
 
   &__divider {
-    color: $color-border;
+    color: $gray-700;
     font-weight: 300;
     line-height: 1;
   }
 
   &__author {
-    font-size: $fs-sm;
+    font-family: $font;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
     color: $gray-700;
   }
 }

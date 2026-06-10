@@ -9,7 +9,7 @@ export const courses = [
   },
   {
     id: 2,
-    title: 'Product Management Fundamentals',
+    title: 'Prduct Management Fundamentals',
     author: 'Marvin McKinney',
     category: 'management',
     price: 480,
@@ -17,7 +17,7 @@ export const courses = [
   },
   {
     id: 3,
-    title: 'HR  Management and Analytics',
+    title: 'HR Management and Analytics',
     author: 'Leslie Alexander Li',
     category: 'hr',
     price: 200,
@@ -60,7 +60,7 @@ export const courses = [
     title: 'Human Resources – Selection and Recruitment',
     author: 'Kathryn Murphy',
     category: 'hr',
-    price: 600,
+    price: 150,
     image: '/assets/images/courses/image-1.png',
   },
   {
